@@ -7,7 +7,7 @@ type GNSSNavPvt = {
 
 export function activate(extensionContext: ExtensionContext) {
     extensionContext.registerMessageConverter({
-    fromSchemaName: "blueboat_interfaces/msg/GNSSNavPvt",
+    fromSchemaName: "microamp_interfaces/msg/GNSSNavPvt",
     toSchemaName: "foxglove.LocationFix",
     converter: (ubxNavPvt: GNSSNavPvt, _: MessageEvent<GNSSNavPvt>) => {
       return {
